@@ -1,4 +1,6 @@
 # Your code goes here!
+require "pry"
+
 class Anagram
    attr_accessor :anagrams
    
@@ -15,6 +17,7 @@ class Anagram
 #  end
   
   def match (array)
+    binding.pry
    array.select {|word|
    word.split("").sort.join("") == @anagram.split("").sort.join("") }
     end
@@ -29,5 +32,8 @@ class Anagram
     
      
 end
-     
-     
+
+hello = Anagram.new("hello")
+hello.match(["hello", "bye"])
+
+
